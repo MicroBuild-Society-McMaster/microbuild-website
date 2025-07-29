@@ -1,6 +1,8 @@
 
 import "./globals.css";
 import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -12,21 +14,31 @@ export const metadata: Metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body style={{ background: '#fff', margin: 0, padding: 0, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <img src="/logo.svg" alt="MicroBuild Logo" style={{ width: 280, height: 280, marginBottom: 40 }} />
-        <h2
+      <body style={{ background: '#fff', minHeight: '100vh', margin: 0 }}>
+        <div
           style={{
-            fontFamily: inter.style.fontFamily,
-            fontWeight: 500,
-            fontSize: 28,
-            color: '#222',
-            textAlign: 'center',
-            margin: 0,
-            letterSpacing: 0.2,
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          In development<br />Check back soon!
-        </h2>
+          <Image src="/logo.svg" alt="MicroBuild Logo" width={280} height={280} style={{ marginBottom: 40 }} />
+          <h2
+            style={{
+              fontFamily: inter.style.fontFamily,
+              fontWeight: 500,
+              fontSize: 28,
+              color: '#222',
+              textAlign: 'center',
+              margin: 0,
+              letterSpacing: 0.2,
+            }}
+          >
+            In development<br />Check back soon!
+          </h2>
+        </div>
       </body>
     </html>
   );
