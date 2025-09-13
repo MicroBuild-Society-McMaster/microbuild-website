@@ -1,8 +1,8 @@
-
 import "./globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -15,6 +15,7 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body style={{ background: '#fff', minHeight: '100vh', margin: 0 }}>
+        <Navbar />
         <div
           style={{
             minHeight: '100vh',
@@ -33,7 +34,7 @@ export default function RootLayout() {
               color: '#222',
               textAlign: 'center',
               margin: 0,
-              letterSpacing: 0.2,
+              letterSpacing: 0.2, 
             }}
           >
             In development<br />Check back soon!
