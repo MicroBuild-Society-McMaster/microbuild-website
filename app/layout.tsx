@@ -34,7 +34,7 @@ export default function RootLayout() {
               color: '#222',
               textAlign: 'center',
               margin: 0,
-              letterSpacing: 0.2, 
+              letterSpacing: 0.2,
             }}
           >
             In development<br />Check back soon!
