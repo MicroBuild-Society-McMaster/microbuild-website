@@ -22,11 +22,11 @@ export default function Navbar() {
 
       {/* Navigation Links Section */}
       <div className="flex items-center" style={{ gap: '40px', paddingRight: '40px' }}>
-        <Link href="/" className={`font-medium text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/' ? 'underline' : ''}`} style={{ color: 'black' }}>HOME</Link>
-        <Link href="/about" className={`font-medium text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/about' ? 'underline' : ''}`} style={{ color: 'black' }}>ABOUT US</Link>
-        <Link href="/events" className={`font-medium text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/events' ? 'underline' : ''}`} style={{ color: 'black' }}>EVENTS</Link>
-        <Link href="/contact" className={`font-medium text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/contact' ? 'underline' : ''}`} style={{ color: 'black' }}>CONTACT US</Link>
-        <Link href="/faq" className={`font-medium text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/faq' ? 'underline' : ''}`} style={{ color: 'black' }}>FAQ</Link>
+        <Link href="/" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/' ? 'underline' : ''}`} style={{ color: '#494E52' }}>HOME</Link>
+        <Link href="/about" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/about' ? 'underline' : ''}`} style={{ color: '#494E52' }}>ABOUT US</Link>
+        <Link href="/events" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/events' ? 'underline' : ''}`} style={{ color: '#494E52' }}>EVENTS</Link>
+        <Link href="/contact" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/contact' ? 'underline' : ''}`} style={{ color: '#494E52' }}>CONTACT US</Link>
+        <Link href="/faq" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/faq' ? 'underline' : ''}`} style={{ color: '#494E52' }}>FAQ</Link>
       </div>
     </nav>
   );
