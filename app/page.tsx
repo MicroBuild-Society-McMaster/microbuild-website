@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="bg-[#f7eaf5] min-h-screen p-8 border-t-4 border-blue-400">
+    <main className="bg-[#f7eaf5] min-h-screen p-8 border-t-2 border-white">
       <div style={{ paddingLeft: '2rem' }}>
         <h1 className="text-5xl font-bold mb-6" style={{ color: '#5E376D' }}>Design. Create.</h1>
         <h1 className="text-5xl font-bold mb-6" style={{ color: '#F9B939' }}>Build in</h1>
