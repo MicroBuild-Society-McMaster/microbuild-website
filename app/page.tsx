@@ -25,7 +25,7 @@ export default function Home() {
       </section>
 
       <section className="text-center">
-      <div className="mt-20 inline-block bg-purple-400 text-5xl font-bold mb-6" style={{ backgroundColor: '#AA8CAE' }}>
+      <div className="mt-20 inline-block bg-purple-400 text-5xl font-bold mb-6 rounded-lg" style={{ backgroundColor: '#AA8CAE' }}>
         <h1 className="mt-6 text-5xl font-bold mb-6" style={{ color: '#ffffffff'}}>Catch us at ClubFest!</h1>
         <div className="p-8 text-left text-white" >
           <p className="text-lg mb-4">
