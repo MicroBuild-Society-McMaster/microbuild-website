@@ -15,7 +15,7 @@ export default function Footer() {
 
             <footer className="bg-[#5E376D] text-[#FCFCFF] py-6">
                 {/* Desktop Layout */}
-                <div className="hidden md:flex items-center px-8 w-full">
+                <div className="hidden md:flex items-center pl-8 lg:pl-16 pr-4 lg:pr-16 w-full">
                     {/* Social Icons */}
                     <div className="flex items-center gap-4">
                         <a
@@ -95,7 +95,8 @@ export default function Footer() {
                 </div>
 
                 {/* Mobile Layout */}
-                <div className="md:hidden px-4 space-y-6">
+                {/* Mobile Layout */}
+                <div className="md:hidden pl-8 lg:pl-16 pr-4 lg:pr-8 space-y-6">
                     {/* University Text - Top on mobile */}
                     <div className="text-white text-sm text-center">
                         <p>

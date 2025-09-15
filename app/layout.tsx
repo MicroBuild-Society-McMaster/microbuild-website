@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ minHeight: '100vh', margin: 0, display: 'flex', flexDirection: 'column' }}>
+      <body style={{ margin: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <Navbar />
-        <main style={{ flex: 1 }}>
+        <main style={{ flexGrow: 1 }}>
           {children}
         </main>
         <Footer />
