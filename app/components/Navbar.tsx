@@ -11,11 +11,12 @@ export default function Navbar() {
       <div className="flex items-center" style={{ marginLeft: '35px' }}>
         <Link href="/" className="flex items-center">
           <Image
-            src="/microbuildlogo.png"
+            src="/logo.svg"
             alt="MicroBuild Society Logo"
-            width={150}
-            height={75}
-            className="h-18 w-auto"
+            width={467}
+            height={433}
+            className="h-20 w-auto"
+            priority
           />
         </Link>
       </div>
