@@ -5,9 +5,9 @@ import { ComponentType } from 'react';
 const routes: Record<string, () => Promise<{ default: ComponentType }>> = {
     'about': () => import('../routes/about'),
     'faq': () => import('../routes/faq'),
+    'contact': () => import('../routes/contact'),
     // Add other routes here as needed
     // 'events': () => import('../routes/events'),
-    // 'contact': () => import('../routes/contact'),
 };
 
 interface PageProps {
