@@ -4,10 +4,10 @@ import { ComponentType } from 'react';
 // Define the available routes and their corresponding components
 const routes: Record<string, () => Promise<{ default: ComponentType }>> = {
     'about': () => import('../routes/about'),
+    'faq': () => import('../routes/faq'),
     // Add other routes here as needed
     // 'events': () => import('../routes/events'),
     // 'contact': () => import('../routes/contact'),
-    // 'faq': () => import('../routes/faq'),
 };
 
 interface PageProps {
@@ -17,7 +17,7 @@ interface PageProps {
 }
 
 export default async function DynamicPage({ params }: PageProps) {
-    const { slug } = params;
+    const { slug } = await params;
 
     // Check if the route exists
     if (!routes[slug]) {
