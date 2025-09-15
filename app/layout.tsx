@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "MicroBuild Society McMaster",
@@ -14,9 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ minHeight: '100vh', margin: 0 }}>
+      <body style={{ minHeight: '100vh', margin: 0, display: 'flex', flexDirection: 'column' }}>
         <Navbar />
-        {children}
+        <main style={{ flex: 1 }}>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
