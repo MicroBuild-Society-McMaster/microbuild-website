@@ -55,7 +55,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between px-4 lg:px-8 shadow-sm relative" style={{ backgroundColor: '#FCFCFF', height: '100px', minHeight: '100px' }}>
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-4 lg:px-8 shadow-sm" style={{ backgroundColor: '#FCFCFF', height: '100px', minHeight: '100px' }}>
       {/* Logo Section */}
       <div className="flex items-center pl-4 lg:pl-8">
         <Link href="/" className="flex items-center">

@@ -5,11 +5,17 @@ export default function Footer() {
         <>
             {/* Skyline positioned above footer */}
             <div
-                className="w-full h-17 bg-repeat-x"
+                className="w-full h-17"
                 style={{
-                    backgroundImage: "url('/skyline.svg')",
-                    backgroundSize: 'auto 100%',
-                    backgroundPosition: 'left bottom'
+                    backgroundColor: '#5E376D',
+                    maskImage: "url('/skyline.svg')",
+                    maskRepeat: 'repeat-x',
+                    maskSize: 'auto 100%',
+                    maskPosition: 'left bottom',
+                    WebkitMaskImage: "url('/skyline.svg')",
+                    WebkitMaskRepeat: 'repeat-x',
+                    WebkitMaskSize: 'auto 100%',
+                    WebkitMaskPosition: 'left bottom'
                 }}
             />
 
