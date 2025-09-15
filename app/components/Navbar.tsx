@@ -3,8 +3,45 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+interface NavLinkProps {
+  href: string;
+  label: string;
+  isActive: boolean;
+}
+
+const NavLink = ({ href, label, isActive }: NavLinkProps) => {
+  const baseClasses = "font-semibold text-base uppercase tracking-wide transition-all duration-200 ease-in-out px-4 relative";
+  const linkStyles = {
+    color: '#494E52',
+  };
+
+  return (
+    <Link
+      href={href}
+      className={`${baseClasses} group`}
+      style={linkStyles}
+    >
+      {label}
+      <span
+        className={`absolute left-4 right-4 bottom-0 h-[0.109375rem] bg-[#5E376D] transition-opacity duration-200 ease-in-out ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+          }`}
+        style={{ transform: 'translateY(12px)' }}
+      />
+    </Link>
+  );
+};
+
 export default function Navbar() {
   const pathname = usePathname();
+
+  const navigationItems = [
+    { href: '/', label: 'HOME' },
+    { href: '/about', label: 'ABOUT US' },
+    { href: '/events', label: 'EVENTS' },
+    { href: '/contact', label: 'CONTACT US' },
+    { href: '/faq', label: 'FAQ' }
+  ];
+
   return (
     <nav className="flex items-center justify-between px-8 shadow-sm" style={{ backgroundColor: '#FCFCFF', height: '100px', minHeight: '100px' }}>
       {/* Logo Section */}
@@ -23,11 +60,14 @@ export default function Navbar() {
 
       {/* Navigation Links Section */}
       <div className="flex items-center" style={{ gap: '40px', paddingRight: '40px' }}>
-        <Link href="/" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/' ? 'underline' : ''}`} style={{ color: '#494E52' }}>HOME</Link>
-        <Link href="/about" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/about' ? 'underline' : ''}`} style={{ color: '#494E52' }}>ABOUT US</Link>
-        <Link href="/events" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/events' ? 'underline' : ''}`} style={{ color: '#494E52' }}>EVENTS</Link>
-        <Link href="/contact" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/contact' ? 'underline' : ''}`} style={{ color: '#494E52' }}>CONTACT US</Link>
-        <Link href="/faq" className={`font-semibold text-base uppercase tracking-wide transition-colors duration-200 px-4 no-underline ${pathname === '/faq' ? 'underline' : ''}`} style={{ color: '#494E52' }}>FAQ</Link>
+        {navigationItems.map((item) => (
+          <NavLink
+            key={item.href}
+            href={item.href}
+            label={item.label}
+            isActive={pathname === item.href}
+          />
+        ))}
       </div>
     </nav>
   );
