@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -89,18 +88,14 @@ export default function Home() {
       </section>
 
       {/* ClubFest Section */}
-      <section className="flex justify-center px-8 lg:px-16 pb-16">
-        <div className="relative max-w-4xl">
-          <Image
-            src="/rectangle.svg"
-            alt="Purple background"
-            width={800}
-            height={400}
-            className="w-full h-auto"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+      <section className="flex justify-center px-4 sm:px-8 lg:px-16 pb-16">
+        <div className="relative max-w-4xl w-full">
+          <div 
+            className="w-full min-h-96 rounded-lg flex flex-col justify-center items-center text-white p-4 sm:p-6 lg:p-8"
+            style={{ backgroundColor: '#AA8CAE' }}
+          >
             <h2
-              className="text-5xl lg:text-6xl font-bold mb-6 text-center"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 text-center leading-tight"
               style={{
                 fontFamily: 'Alatsi, sans-serif',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)'
@@ -109,17 +104,19 @@ export default function Home() {
               Catch us at ClubFest!
             </h2>
             <div
-              className="text-center space-y-2"
+              className="text-center space-y-2 sm:space-y-3 max-w-3xl"
               style={{ fontFamily: 'Aileron, Arial, sans-serif' }}
             >
-              <p className="text-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl">
                 <strong>Date and Time:</strong> September 17, 10 AM – 3 PM
               </p>
-              <p className="text-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl">
                 <strong>Location:</strong> Mills Plaza on the BSB Lawn
               </p>
-              <p className="text-2xl mt-4">
-                Spin our prize wheel to win 3D-printed architectural<br />
+              <p className="text-lg sm:text-xl lg:text-2xl mt-3 sm:mt-4 leading-relaxed">
+                Spin our prize wheel to win 3D-printed architectural
+                <span className="hidden sm:inline"><br /></span>
+                <span className="sm:hidden"> </span>
                 landmark keychains and other fun prizes!
               </p>
             </div>
