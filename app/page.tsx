@@ -15,6 +15,8 @@ export default function Home() {
           backgroundRepeat: 'no-repeat'
         }}
       >
+        {/* Overlay for background image opacity */}
+        <div className="absolute inset-0 bg-black opacity-50 pointer-events-none" />
         <div className="relative z-10 flex-1 max-w-3xl">
           <h1
             className="text-6xl lg:text-7xl font-bold leading-tight -mt-10"
@@ -90,7 +92,7 @@ export default function Home() {
       {/* ClubFest Section */}
       <section className="flex justify-center px-4 sm:px-8 lg:px-16 pb-16">
         <div className="relative max-w-4xl w-full">
-          <div 
+          <div
             className="w-full min-h-96 rounded-lg flex flex-col justify-center items-center text-white p-4 sm:p-6 lg:p-8"
             style={{ backgroundColor: '#AA8CAE' }}
           >
