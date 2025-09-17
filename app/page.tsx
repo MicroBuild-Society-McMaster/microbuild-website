@@ -16,7 +16,7 @@ export default function Home() {
         }}
       >
         {/* Overlay for background image opacity */}
-        <div className="absolute inset-0 bg-black opacity-50 pointer-events-none" />
+        <div className="absolute inset-0 bg-black opacity-70 pointer-events-none" />
         <div className="relative z-10 flex-1 max-w-3xl">
           <h1
             className="text-6xl lg:text-7xl font-bold leading-tight -mt-10"
